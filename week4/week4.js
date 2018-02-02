@@ -21,7 +21,7 @@ function display(text, noText) {
     errText = "Not this time, try agian!";
     var textArea = document.getElementById("people");
 
-    if(mod != 0 || first == true) {
+    if(mod != 0 || first) {
         textArea.value = errText;
         first = false;
     }
