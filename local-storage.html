@@ -3,11 +3,13 @@
 <head>
     <script>
         function storeData() {
-            localStorage.setItem("data", document.getElementById('input').innerHTML);
+            input = document.getElementById('input');
+            localStorage.setItem('data', input.value);
         } 
         
         function getData() {
-            document.getElementById('output').innerHTML = localStorage("data");
+            output = document.getElementById('output');
+            output.value = localStorage.getItem("data");
         }
 
         
