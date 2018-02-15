@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+<head>
+    <script>
+        function storeData() {
+            localStorage.setItem("data", document.getElementById('input').innerHTML);
+        } 
+        
+        function getData() {
+            document.getElementById('output').innerHTML = localStorage("data");
+        }
+
+        
+    </script>
+
+</head>
+
+<body>
+    <p>put in some info here</p>
+    <input type="text" id="input">
+    <button onclick="storeData()">Store</button>
+</br>
+    <p>get the output here!</p>
+    <input type="text" id="output">
+    <button onclick="getData()">get!</button>
+</body>
+</html>
