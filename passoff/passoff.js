@@ -35,16 +35,17 @@ function display(text, ranNum) {
     else {
         output = text;    
     }
-
+    //creating js property
     var p = document.createElement('P');
     var t = document.createTextNode(output);
     p.appendChild(t);
+    //adding styles with js
     p.style.color = "red";
     p.style.fontSize = "30";
     p.style.fontFamily = "Comic Sans MS, cursive, sans-serif"
     document.getElementById("peoplediv").appendChild(p);
 }
-
+//this loads passoff.json into obj using ajax
 function loadJSON() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
