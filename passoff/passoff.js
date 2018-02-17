@@ -1,15 +1,12 @@
-//This is the data, usually it would be stored on a server
-// var jsonString = '{ "employees" : [' +
-// '{ "firstName":"John" , "lastName":"Doe" },' +
-// '{ "firstName":"Anna" , "lastName":"Smith" },' +
-// '{ "firstName":"Peter" , "lastName":"Jones" } ]}';
-//This turns the json into a usable js object
+//this is the object that will be used
 var obj;
 
+if(localStorage.getItem("count") == undefined) {
+    localStorage.setItem("count", 0);
+}
 //This is used so that the first time the user clicks the button it will always tell them to try again
 var first = true;
 
-//This adds the printPeople method to obj
 //It will add the informaiton from obj into a text string and then display it.
 function printPeople() {
     var text = "";
@@ -27,7 +24,8 @@ function printPeople() {
 //This displays the information in obj or will print an error message depending on the ranNum
 function display(text, ranNum) {
     var mod = ranNum % 2;
-    var errText = "Not this time, try agian!";
+    localStorage.setItem("count", (parseInt(localStorage.getItem("count")) + 1))
+    var errText = "Not this time, try agian! Button pressed " + localStorage.getItem("count") + " times!";
     var output = "";
     //if ranNum is odd, it will print an error message
     if(mod != 0 || first) {
@@ -41,6 +39,9 @@ function display(text, ranNum) {
     var p = document.createElement('P');
     var t = document.createTextNode(output);
     p.appendChild(t);
+    p.style.color = "red";
+    p.style.fontSize = "30";
+    p.style.fontFamily = "Comic Sans MS, cursive, sans-serif"
     document.getElementById("peoplediv").appendChild(p);
 }
 
@@ -48,15 +49,15 @@ function loadJSON() {
     var xhttp = new XMLHttpRequest();
     xhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
-        obj = this.responseText;
+        obj = JSON.parse(this.responseText);
+        printPeople();
       }
     };
-    xhttp.open("GET", "./passoff.json", true);
+    xhttp.open("GET", "https://knightfalkon.github.io/passoff/passoff.json", true);
     xhttp.send();
   }
 
 //main driver function
 function doStuff() {
     loadJSON();
-    printPeople();
 }
