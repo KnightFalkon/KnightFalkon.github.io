@@ -5,7 +5,7 @@ if(localStorage.getItem("count") == undefined) {
     localStorage.setItem("count", 0);
 }
 //This is used so that the first time the user clicks the button it will always tell them to try again
-var first = true;
+localStorage.setItem("first", true);
 
 //It will add the informaiton from obj into a text string and then display it.
 function printPeople() {
@@ -28,9 +28,9 @@ function display(text, ranNum) {
     var errText = "Not this time, try agian! Button pressed " + localStorage.getItem("count") + " times!";
     var output = "";
     //if ranNum is odd, it will print an error message
-    if(mod != 0 || first) {
+    if(mod != 0 || (localStorage.getItem("first") == true)) {
         output = errText
-        first = false;
+        localStorage.setItem("first", false);
     } //If it is even it will print the information from obj
     else {
         output = text;    
