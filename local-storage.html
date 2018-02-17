@@ -2,14 +2,15 @@
 <html>
 <head>
     <script>
+        //will store the data provided in localStorage
         function storeData() {
             input = document.getElementById('input');
             localStorage.setItem('data', input.value);
         } 
-        
+        //retrieves the stored data in local storage
         function getData() {
             output = document.getElementById('output');
-            output.value = localStorage.getItem("data");
+            output.value = localStorage.getItem('data');
         }
 
         
@@ -22,7 +23,7 @@
     <input type="text" id="input">
     <button onclick="storeData()">Store</button>
 </br>
-    <p>get the output here!</p>
+    <p>get the info here!</p>
     <input type="text" id="output">
     <button onclick="getData()">get!</button>
 </body>
