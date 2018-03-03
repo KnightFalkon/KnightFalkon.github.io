@@ -1,23 +1,54 @@
 .stay {
-    width: 50px;
-    height: 50px;
+    width: 100px;
+    height: 100px;
     transition: width 2s, height 4s;
-    animation-name: example;
-    animation-duration: 10s;
 }
 
 .stay:hover {
-    width: 100px;
-    height: 100px;
+    width: 300px;
+    height: 300px;
+}
+
+.leave {
+    width: 150px;
+    height: 150px;
+    transition: width 2s, height 4s;
+    animation-name: example;
+    animation-duration: 100s;
+}
+
+.leave:hover {
+    width: 350px;
+    height: 350px;
+}
+
+.go {
+    width: 500px;
+    height: 500px;
+    transition: width 2s, height 4s;
+    animation-name: example2;
+    animation-duration: 30s;
+}
+
+.go:hover {
+    width: 50px;
+    height: 50px;
 }
 
 
 
-#stay {transition-timing-function: ease;}
+#leave {transition-timing-function: ease;}
 
 @keyframes example {
     0%   {background-color: red;}
     25%  {background-color: yellow;}
     50%  {background-color: blue;}
     100% {background-color: purple;}
+}
+
+@keyframes example2 {
+    0%   {background-color: orange;}
+    25%  {background-color: blue;}
+    50%  {background-color: green;}
+    100% {background-color: red;}
 }
