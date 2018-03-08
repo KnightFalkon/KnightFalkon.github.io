@@ -1,11 +1,12 @@
-function doStuff() {
-    var elem = document.getElementById("clickBait");
+// function doStuff() {
+//     var elem = document.getElementById("clickBait");
 
-    elem.classList.add("stay");
-}
+//     elem.classList.add("stay");
+// }
 
 window.addEventListener('load', function(){
     
+    var elem01 = document.getElementById("clickBait");    
     var elem = document.getElementById("clickBait1");
     var elem2 = document.getElementById("clickDiv1");
     var elem3 = document.getElementById("clickBait2");
@@ -18,7 +19,8 @@ window.addEventListener('load', function(){
     var d = document.getElementById("4");
     
     
-    elem.addEventListener('touchstart', function(e){
+    elem01.addEventListener('touchstart', function(e){
+        elem01.classList.add("stay");
         elem.classList.add("stay");
         elem2.classList.add("leave");
         elem3.classList.add("go");
