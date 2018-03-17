@@ -19,7 +19,7 @@ window.addEventListener('load', function(){
     var d = document.getElementById("4");
     
     
-    elem01.addEventListener('touchstart', function(e){
+    elem01.addEventListener('click', function(e){
         elem01.classList.add("stay");
         elem.classList.add("stay");
         elem2.classList.add("leave");
