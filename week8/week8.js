@@ -21,15 +21,15 @@ window.addEventListener('load', function(){
     
     elem01.addEventListener('click', function(e){
         elem01.classList.add("stay");
-        elem.classList.add("stay");
-        elem2.classList.add("leave");
-        elem3.classList.add("go");
-        elem4.classList.add("go");
+        elem.classList.add("leave");
+        elem2.classList.add("go");
+        elem3.classList.add("stay");
+        elem4.classList.add("leave");
         elem5.classList.add("go");
-        elem6.classList.add("go");
+        elem6.classList.add("stay");
         a.classList.add("leave");
-        b.classList.add("leave");
-        c.classList.add("leave");
+        b.classList.add("go");
+        c.classList.add("stay");
         d.classList.add("leave");
         
     }, false)
