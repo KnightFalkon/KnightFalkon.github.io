@@ -15,8 +15,8 @@
     0%   {transform: rotate(0deg); left:50px; top:0px;}
     25%  {transform: rotate(360deg); left:270px; top:0px;}
     50%  {transform: rotate(720deg); left:270px; top:150px;}
-    75%  {transform: rotate(1080deg); left:50px; top:150px;}
-    100% {transform: rotate(1440deg); left:50px; top:0px;}
+    75%  {transform: rotate(360deg); left:50px; top:150px;}
+    100% {transform: rotate(720deg); left:50px; top:0px;}
 }
 
 @keyframes running {
