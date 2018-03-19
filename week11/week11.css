@@ -1,0 +1,47 @@
+.chasing {
+    position: relative;
+    animation-name: chasing;
+    animation-duration: 12s;
+    animation-iteration-count: infinite;
+}
+
+.running {
+    position: relative;
+    animation-name: running;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+}
+@keyframes chasing {
+    0%   {transform: rotate(0deg); left:50px; top:0px;}
+    25%  {transform: rotate(360deg); left:270px; top:0px;}
+    50%  {transform: rotate(720deg); left:270px; top:150px;}
+    75%  {transform: rotate(1080deg); left:50px; top:150px;}
+    100% {transform: rotate(1440deg); left:50px; top:0px;}
+}
+
+@keyframes running {
+    0%   {transform: rotate(5deg); left:0px; top:0px;}
+    5% {transform: rotate(-5deg); left:40px; top:0px;}
+    10% {transform: rotate(5deg); left:80px; top:0px;}
+    15% {transform: rotate(-5deg); left:120px; top:0px;}
+    20% {transform: rotate(5deg); left:160px; top:0px;}
+    25%  {transform: rotate(-5deg); left:200px; top:0px;}
+
+    30% {transform: rotate(5deg); left:200px; top:40px;}
+    35% {transform: rotate(-5deg); left:200px; top:80px;}
+    40% {transform: rotate(5deg); left:200px; top:160px;}
+    45% {transform: rotate(-5deg); left:200px; top:200px;}
+
+    50%  {transform: rotate(5deg); left:160px; top:200px;}
+    55% {transform: rotate(-5deg); left:120px; top:200px;}
+    60% {transform: rotate(5deg); left:80px; top:200px;}
+    65% {transform: rotate(-5deg); left:40px; top:200px;}
+    70% {transform: rotate(5deg); left:0px; top:200px;}
+
+    75%  {transform: rotate(-5deg); left:0px; top:160px;}
+    80% {transform: rotate(5deg); left:0px; top:120px;}
+    85% {transform: rotate(-5deg); left:0px; top:80px;}
+    90% {transform: rotate(5deg); left:0px; top:40px;}
+    95% {transform: rotate(-5deg); left:0px; top:0px;}
+    100% {transfrom: rotate(0deg); left:0px; top:0px;}
+}
