@@ -1,0 +1,140 @@
+body {
+    color: white;
+    font-size: 125%;
+    background-color: #00004c;
+    background-image: url("http://www.jasonjunker.com/wp-content/uploads/2017/08/slider_img.png");
+}
+#hideAll
+ {
+   position: fixed;
+   left: 0px; 
+   right: 0px; 
+   top: 0px; 
+   bottom: 0px; 
+   background-color: white;
+   z-index: 99;
+
+ }
+
+ .jitter:hover
+{
+        animation: jitter 1s ease;
+        animation-iteration-count: 1;
+}
+
+.shadow:hover
+{
+        box-shadow:
+                1px 1px grey,
+                2px 2px grey,
+                3px 3px grey;
+        transform: translateX(-3px);
+}
+
+ .bigger:hover {
+    transform: scale(1.3);
+ }
+
+ .rounded:hover {
+    border-radius: 50%;
+ }
+
+.invis {
+    opacity: 0;
+} 
+
+ .text-center {
+     text-align: center;
+ }
+
+ .pull-left {
+    display: inline-block;
+    text-align: left;
+ }
+
+ .appear {
+    position: fixed;
+    left: 40%;
+    top: 30%;
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+ }
+
+ .appearB {
+    position: fixed;
+    left: 40%;
+    top: 40%;
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+ }
+
+ .appearU {
+    position: fixed;
+    left: 40%;
+    top: 25%;
+    animation-name: appear;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+ }
+
+ .go-left {
+    position: relative;
+    animation-name: go-left;
+    animation-duration: 6s;
+    animation-fill-mode: forwards;
+ }
+
+ .go-right {
+    position: relative;
+    animation-name: go-right;
+    animation-fill-mode: forwards;
+    animation-duration: 6s;
+ }
+
+ .go-down {
+    position: relative;
+    animation-name: go-down;
+    animation-fill-mode: forwards;
+    animation-duration: 6s;
+ }
+
+ @keyframes go-left {
+    0%   {transform: rotate(0deg);   opacity: 1;   left: 0px; top:0px;}
+    /* 25%  {transform: rotate(360deg); opacity: .75; left:-50px; top:0px;} */
+    /* 50%  {transform: rotate(720deg); opacity: .50; left:-100px; top:0px;} */
+    /* 75%  {transform: rotate(360deg); opacity: .25; left:-200px; top:0px;} */
+    100% {transform: rotate(1000deg); opacity: 0;   left:-400px; top:0px;}
+ }
+
+ @keyframes go-right {
+    0%   {transform: rotate(0deg);   opacity: 1;   left:0px; top:0px;}
+    /* 25%  {transform: rotate(360deg); opacity: .75; left:50px; top:0px;}
+    50%  {transform: rotate(720deg); opacity: .50; left:100px; top:0px;}
+    75%  {transform: rotate(360deg); opacity: .25; left:200px; top:0px;} */
+    100% {transform: rotate(1000deg); opacity: 0;   left:400px; top:0px;}
+ }
+
+ @keyframes go-down {
+    0%   {transform: rotate(0deg);   opacity: 1;    left:0px; top:0px;}
+    /* 25%  {transform: rotate(360deg); opacity: .75;  left:0px; top:50px;}
+    50%  {transform: rotate(720deg); opacity: .50;  left:0px; top:100px;}
+    75%  {transform: rotate(360deg); opacity: .25;  left:0px; top:200px;} */
+    100% {transform: rotate(1000deg); opacity: 0;    left:0px; top:100px;}
+ }
+
+ @keyframes appear {
+     0% { transform: rotate(0deg); opacity: 0; }
+     100% { transform: rotate(1080); opacity: 1; }
+ }
+
+ @keyframes jitter
+{
+    15% { transform: translateX(5px); }
+    30% { transform: translateX(-5px); }
+    50% { transform: translateX(3px); }
+    65% { transform: translateX(-3px); }
+    80% { transform: translateX(2px); }
+    100% { transform: translateX(0); }
+}

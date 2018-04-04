@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" src="final.js"></script>
+
+        <link rel="stylesheet" href="final.css">
+
+        <title>Final Project</title>
+
+    </head>
+
+    <body onload="getStocks()">
+    <div id="hideAll">Loading...</div>
+    <script type="text/javacript">
+        document.getElementById("hideAll").style.display = "block";
+    </script>
+
+
+
+    <div class="text-center">   
+    <div class="pull-left">
+
+    </br>
+    <h1>Stock Revealer</h1>
+    <p id="1">Choose a stock from the list</p>
+    <select class="jitter" name="stocks" id="stocks" onchange="updatePrice()">
+        <option value=""></option>
+    </select></br></br></br>
+    <p id="si1">Or input the stock you want to search. </p>
+    <p id="si2">(Must use abreviated form e.g. AAPL for apple)</p>
+    <input type="text" class="shadow" id="stockInput"></br>
+    <button class="rounded" onclick="getStock()" id="getStock">Get Price</button>
+
+    <h3 id="stockName"></h3>
+    <h4 id="stockPrice"></h4>
+    <button onclick="goBack()" id="goBack" class="invis bigger">Go Back</button>
+    </div>
+
+    </div>
+    </body>
+</html>
