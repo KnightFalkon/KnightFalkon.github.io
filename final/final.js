@@ -42,7 +42,7 @@ function updatePrice() {
         }
     }
     document.getElementById('stockPrice').innerHTML = "$" + dowStocks.results[index].lastPrice;
-    document.getElementById('stockName').innerHTML = dowStocks.results[0].name;  
+    document.getElementById('stockName').innerHTML = dowStocks.results[index].name;  
     
 }
 
